@@ -4,16 +4,13 @@
 void fibonacci(int n) {
     long long *fib = (long long *)malloc(n * sizeof(long long));
 
-  // Inicialización de los dos primeros términos de la serie
     fib[0] = 0;
     fib[1] = 1;
 
-    // Calculo secuencial de la serie de Fibonacci
     for (int i = 2; i < n; i++) {
         fib[i] = fib[i - 1] + fib[i - 2];
     }
 
-    // Despliega la serie de Fibonacci
     printf("Serie de Fibonacci hasta %d términos:\n", n);
     for (int i = 0; i < n; i++) {
         printf("%lld ", fib[i]);

@@ -24,15 +24,12 @@ namespace Calculadora_web.Controllers
 
         private double EvaluarInfija(string expresion)
         {
-            // Implementar evaluación de expresión infija
-            // Aquí usamos DataTable para simplificar
             var table = new System.Data.DataTable();
             return Convert.ToDouble(table.Compute(expresion, string.Empty));
         }
 
         private double EvaluarPrefija(string expresion)
         {
-            // Evaluar una expresión prefija utilizando una pila
             string[] tokens = expresion.Split(' ');
             Array.Reverse(tokens);
             Stack<double> stack = new Stack<double>();
